@@ -69,6 +69,11 @@
         .anim-float-slow { animation: floatY 5s ease-in-out infinite; }
         .anim-float-fast { animation: floatY 2.5s ease-in-out infinite; }
 
+        /* Animação float apenas em telas grandes (desktop) */
+        @media (min-width: 1024px) {
+            .anim-float-desktop { animation: floatY 3.5s ease-in-out infinite; }
+        }
+
         @keyframes bounceY {
             0%, 100% { transform: translateY(0); }
             50% { transform: translateY(-8px); }
@@ -482,10 +487,10 @@
                     </div>
                 </div>
 
-                <div class="lg:col-span-5 hidden lg:block reveal-right">
-                    <div class="relative mx-auto max-w-md anim-float">
+                <div class="lg:col-span-5 reveal-right mt-8 lg:mt-0">
+                    <div class="relative mx-auto max-w-md anim-float-desktop">
                         <div class="relative glass-card rounded-3xl p-6 shadow-2xl space-y-6 border border-white/20 text-slate-900">
-                            <div class="relative rounded-2xl overflow-hidden h-72 shadow-md zoom-img">
+                            <div class="relative rounded-2xl overflow-hidden h-56 sm:h-72 shadow-md zoom-img">
                                 <img src="p2.jpg" alt="Tarcisio Rodrigues surfando" class="w-full h-full object-cover object-center">
                                 <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent flex items-end p-4">
                                     <span class="text-white text-xs font-semibold px-3 py-1 rounded-full bg-ocean-600/80 backdrop-blur-sm">
